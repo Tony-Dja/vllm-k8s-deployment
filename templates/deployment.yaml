@@ -15,7 +15,7 @@ spec:
       containers:
         - name: vllm
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          pullPolicy: Never
+          imagePullPolicy: Never
           args:
             - "--model"
             - "{{ .Values.model }}"
