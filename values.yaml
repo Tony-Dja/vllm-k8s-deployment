@@ -1,8 +1,8 @@
 replicaCount: 1
 
 image:
-  repository: vllm/vllm-openai
-  tag: v0.7.2
+  repository: vllm-cpu
+  tag: latest
   pullPolicy: IfNotPresent
 
 model: /home/tonydja/projets/data/llm/llama-3-8B-instruct-quantized.w8a16
