@@ -20,6 +20,8 @@ spec:
             - "{{ .Values.model }}"
             - "--port"
             - "{{ .Values.port }}"
+            - "--device"
+            - "cpu"
 #            - "--gpu-memory-utilization"
 #            - "0.90"
           ports:
