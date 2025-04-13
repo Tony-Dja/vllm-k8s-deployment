@@ -1,15 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "vllm.fullname" . }}
-  labels:
-    {{- include "vllm.labels" . | nindent 4 }}
+  name: {{ .Release.Name }}-vllm
 spec:
   type: {{ .Values.service.type }}
+  selector:
+    app: {{ .Release.Name }}-vllm
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
-      protocol: TCP
-      name: http
-  selector:
-    {{- include "vllm.selectorLabels" . | nindent 4 }}
+      targetPort: {{ .Values.port }}
