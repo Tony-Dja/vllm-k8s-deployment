@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: vllm-cpu
   tag: latest
-  pullPolicy: IfNotPresent
+  pullPolicy: Never
 
 model: /home/tonydja/projets/data/llm/llama-3-8B-instruct-quantized.w8a16
 port: 8000
